@@ -153,7 +153,7 @@
       ctx.clearRect(0, 0, cssW, cssH);
       drawLinks();
       drawDots();
-      raf = requestAnimationFrame(step);
+      requestAnimationFrame(step);
     }
 
     function pointerToLocal(clientX, clientY) {
@@ -219,5 +219,171 @@
       my = start.y;
       step();
     }
+  }
+
+  if (!reduceMotion) {
+    document.querySelectorAll(".orbit-card").forEach((card) => {
+      card.addEventListener("pointermove", (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.setProperty("--tilt-x", `${py * -7}deg`);
+        card.style.setProperty("--tilt-y", `${px * 7}deg`);
+      });
+      card.addEventListener("pointerleave", () => {
+        card.style.setProperty("--tilt-x", "0deg");
+        card.style.setProperty("--tilt-y", "0deg");
+      });
+    });
+  }
+
+  const contactCanvas = document.getElementById("contact-canvas");
+  const contactSection = document.getElementById("contact");
+  if (contactCanvas && contactSection && !reduceMotion) {
+    const cctx = contactCanvas.getContext("2d", { alpha: true });
+    const contactLayer = contactCanvas.closest(".contact-bg");
+    const cColors = ["#3ee8c7", "#9d8cff", "#f4a261"];
+    let cParts = [];
+    let cW = 300;
+    let cH = 300;
+    let cmx = 0;
+    let cmy = 0;
+
+    function cPlace(w, h) {
+      const count = 36;
+      const cx = w * 0.42;
+      const cy = h * 0.5;
+      const r = Math.min(w, h) * 0.3;
+      const out = [];
+      for (let i = 0; i < count; i++) {
+        const t = (i / count) * Math.PI * 2 + (Math.random() - 0.5) * 0.2;
+        const rr = r * (0.75 + Math.random() * 0.25);
+        const bx = cx + Math.cos(t) * rr;
+        const by = cy + Math.sin(t) * rr;
+        out.push({
+          x: bx,
+          y: by,
+          bx,
+          by,
+          vx: 0,
+          vy: 0,
+          hue: i % 3,
+        });
+      }
+      return out;
+    }
+
+    function cResize() {
+      if (!contactLayer) return;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const rect = contactCanvas.getBoundingClientRect();
+      cW = Math.max(1, Math.floor(rect.width));
+      cH = Math.max(1, Math.floor(rect.height));
+      contactCanvas.width = Math.floor(cW * dpr);
+      contactCanvas.height = Math.floor(cH * dpr);
+      cctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cParts = cPlace(cW, cH);
+    }
+
+    function cDrawLinks() {
+      const maxD = Math.min(cW, cH) * 0.18;
+      const n = cParts.length;
+      for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+          const a = cParts[i];
+          const b = cParts[j];
+          const d = Math.hypot(a.x - b.x, a.y - b.y);
+          if (d < maxD && d > 0.5) {
+            const t = 1 - d / maxD;
+            cctx.strokeStyle = `rgba(140, 170, 220, ${t * 0.28})`;
+            cctx.lineWidth = 1;
+            cctx.beginPath();
+            cctx.moveTo(a.x, a.y);
+            cctx.lineTo(b.x, b.y);
+            cctx.stroke();
+          }
+        }
+      }
+    }
+
+    function cDrawDots() {
+      for (const p of cParts) {
+        cctx.fillStyle = cColors[p.hue];
+        cctx.globalAlpha = 0.88;
+        cctx.beginPath();
+        cctx.arc(p.x, p.y, 2.2, 0, Math.PI * 2);
+        cctx.fill();
+        cctx.globalAlpha = 1;
+      }
+    }
+
+    function cStep() {
+      const spring = 0.026;
+      const damp = 0.91;
+      for (const p of cParts) {
+        let ax = (p.bx - p.x) * spring;
+        let ay = (p.by - p.y) * spring;
+        const dx = cmx - p.x;
+        const dy = cmy - p.y;
+        const d2 = dx * dx + dy * dy + 120;
+        const pull = 3400 / d2;
+        ax += dx * pull * 0.11;
+        ay += dy * pull * 0.11;
+        p.vx = (p.vx + ax) * damp;
+        p.vy = (p.vy + ay) * damp;
+        p.x += p.vx;
+        p.y += p.vy;
+      }
+      cctx.clearRect(0, 0, cW, cH);
+      cDrawLinks();
+      cDrawDots();
+      requestAnimationFrame(cStep);
+    }
+
+    function cLocal(clientX, clientY) {
+      const rect = contactCanvas.getBoundingClientRect();
+      return { x: clientX - rect.left, y: clientY - rect.top };
+    }
+
+    function cOnMove(e) {
+      const o = cLocal(e.clientX, e.clientY);
+      cmx = o.x;
+      cmy = o.y;
+    }
+
+    function cOnLeave() {
+      cmx = cW * 0.42;
+      cmy = cH * 0.5;
+    }
+
+    function cOnDown(e) {
+      if (e.target && e.target.closest && e.target.closest("a, button")) return;
+      const { x, y } = cLocal(e.clientX, e.clientY);
+      const blast = Math.min(cW, cH) * 0.28;
+      for (const p of cParts) {
+        const d = Math.hypot(p.x - x, p.y - y);
+        if (d < blast && d > 0.5) {
+          const f = ((blast - d) / blast) * 5;
+          const ang = Math.atan2(y - p.y, x - p.x);
+          p.vx += Math.cos(ang) * f;
+          p.vy += Math.sin(ang) * f;
+        }
+      }
+    }
+
+    cResize();
+    if (typeof ResizeObserver !== "undefined" && contactLayer) {
+      const cro = new ResizeObserver(() => cResize());
+      cro.observe(contactLayer);
+    } else {
+      window.addEventListener("resize", cResize);
+    }
+
+    contactSection.addEventListener("pointermove", cOnMove, { passive: true });
+    contactSection.addEventListener("pointerleave", cOnLeave);
+    contactSection.addEventListener("pointerdown", cOnDown);
+    cmx = cW * 0.42;
+    cmy = cH * 0.5;
+    cStep();
   }
 })();

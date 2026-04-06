@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <div class="body-bg" aria-hidden="true"></div>
     <header class="site-header">
       <div class="wrap header-inner">
         <a class="brand" href="#top">Aswath<span>.</span></a>
@@ -132,7 +133,10 @@
         </div>
       </section>
 
-      <section id="contact">
+      <section id="contact" class="section-contact">
+        <div class="contact-bg" aria-hidden="true">
+          <canvas id="contact-canvas"></canvas>
+        </div>
         <div class="wrap">
           <header class="section-head">
             <p class="section-kicker">Contact</p>
@@ -302,7 +306,7 @@
             .map(function (c) {
               var items = (c.items || [])
                 .map(function (i) {
-                  return "<li>" + esc(i) + "</li>";
+                  return '<li class="skill-chip">' + esc(i) + "</li>";
                 })
                 .join("");
               return (
