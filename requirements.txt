@@ -1,0 +1,2 @@
+# Python tooling for this repo (use with ./venv)
+pypdf>=6.0

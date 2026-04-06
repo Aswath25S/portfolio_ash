@@ -1,0 +1,185 @@
+ASWATH SURESH   aswathsureshjhu@gmail.com | 1-410-493-7355 | www.linkedin.com/in/aswathsuresh25
+
+
+EDUCATION
+
+JOHNS HOPKINS UNIVERSITY | Baltimore, MD
+Master of Science in Data Science | GPA : 3.94/4| May 2026
+Courses: Introduction to Data Science, Investment Science, Computing for Applied Mathematics, Statistical Methods and Data Analysis, Computer Vision, Artificial Intelligence, Deep Learning 
+ 
+INDIAN INSTITUTE OF TECHNOLOGY BOMBAY (IITB) | Mumbai, India
+Bachelor of Technology in Aerospace Engineering | GPA : 3.32/4 | May 2022
+Courses: Data Analysis and Interpretation, Economics, Machine Learning Based Uncertainty Quantification for Composites 
+ 
+EXPERIENCE
+
+Founding Engineer | EligioAI - AI platform for patient triage and clinician scheduling | Baltimore, MD | Jan 2026 - Present
+Architected and deployed scalable AI-powered patient triaging platform from scratch, replacing unscalable MVP with production-ready React frontend (Tailwind CSS, Radix UI) and Python Flask backend with OpenAI integration for healthcare providers
+Designed comprehensive authentication system with JWT tokens, RESTful APIs, and role-based access control ensuring secure handling of protected health information (PHI) across user registration, login, and protected routes
+Built secure medical document processing pipeline supporting PDF/image uploads with automated categorization, validation, and storage using SQLAlchemy database management for efficient patient submission workflows
+Led technical migration from Lovable-based MVP to custom full-stack solution, establishing core technology stack and architecture to support scalable patient triaging with AI-driven assessments and real-time chat interfaces
+
+Data Scientist | Campbell - Quantitative investment firm specializing in systematic futures and equities trading | Baltimore, MD | Jan 2026 - Present
+Developed FinBERT-based sentiment analysis system processing 50+ articles/query with 95%+ extraction success across gold/crude oil markets.
+Created modular Python architecture with automated CSV pipelines, reducing analysis time by 80% while processing 1000+ articles daily.
+Integrated Hugging Face transformers with PyTorch for real-time inference, achieving 90%+ accuracy with 512-token chunking for financial sentiment classification.
+Architected market sentiment platform combining web scraping, NLP, and data engineering to transform news into actionable trading signals.
+
+Data Science Intern | Costac - Data analytics platform for financial and customer behavior analysis for small and medium enterprises | Baltimore, MD | Dec 2024 - Jan 2025
+Engineered time-based features and ML pipelines using PyTorch, scikit-learn, and pandas to predict restaurant revenue and customer behavior achieving R² score of 0.85 and reducing MSE by 25% compared to baseline models
+Designed comprehensive data visualization system with matplotlib, seaborn, and statistical analysis to analyze customer behavior and business performance identifying 40% revenue optimization opportunities with 90% confidence intervals
+Implemented RNN, LSTM, and GRU neural networks with PyTorch and NumPy to handle sequential time series data achieving MAPE of 8.5% through comparative analysis of multiple architectures
+
+Research Intern | Indian Institute of Technology Madras (IITM) | Chennai, India | Feb 2024 - May 2024
+Conducted comprehensive literature review of 20+ research papers to explore augmented and virtual reality visualization methods for high-dimensional data
+Experimented dimensionality reduction algorithms in 2D and 3D to find the best approach for simplifying data in AR/VR environments
+Led cross-lab collaboration to develop and present AR/VR solutions in Unity, showcasing findings to professors and industry professionals
+
+Software Developer | Teachmint | Bengaluru, India | Jun 2022 - Jun 2023
+Revamped backend module in python which dealt with client data by incorporating advanced algorithms and OOP concepts to increase scalability and reduce response times by 50%
+Designed fix for microservice interactions by unifying disparate APIs into company-standard Flask boosting efficiency by 60%
+Migrated MongoDB data collections with 1 million data points to more efficient schema using Python scripts, reducing API latency by 20%
+Developed automated system to web-scrape ed-tech government tender data for use by business development team, increasing time efficiency by 70%
+Built multiple full-stack features using React Javascript for frontend, Python Flask for backend, and with MongoDB and Google Cloud as database
+
+Software Intern | Jobsage.ai - AI driven recruitment marketing and job recommendation platform | Charlotte, NC | Jun 2021 - Jul 2021
+Created scripts to extract hiring info from job alert emails, automating data delivery through Google Cloud to marketing and business teams, boosting time efficiency by 80%
+Constructed API using Flask in Python and scheduled cron job to update MySQL database based on user promo code validity ensuring 15% revenue savings
+
+Machine Learning Intern | Sustlabs - Energy analytics platform optimizing residential and commercial electricity usage | Mumbai, India | Apr 2020 - Jun 2020
+Generated time-series dataset of over 2 million points of house power consumption from initial set of 20,000 entries, aimed at predicting power consumed by individual appliances 
+Trained regression, dense, recurrent and LSTM models of various architectures to predict appliance specific power consumption, achieving R2 greater than .8
+Deployed neural network models on cloud server and integrated Kafka for real-time data streaming, enabling live power usage predictions for more than 5,000 customers
+Stored predicted data in InfluxDB, visualized the output with Graphana and compared model performances using WandB
+
+Data Science Intern | Floww - SaaS platform helping startups and MSMEs manage core business operations | Mumbai, India | Dec 2019 - Jan 2020
+Web scraped physical parameter data of vehicles used for goods transportation using BeautifulSoup in python to predict mileage
+Processed data using pandas and stored using the google sheets API in python for collaboration and feedback with co-founders
+Trained several machine learning algorithms to predict the mileage of vehicles and compared performances
+
+Member | Software Subsystem | Rakshak - IIT Bombay's UAV team developing drones for disaster response | Mumbai, India | October 2018 - December 2019
+Generated image dataset using OpenCV in python and trained neural networks built using tensorflow and keras
+Implemented convolutional neural networks such as U-Net for semantic segmentation of generated images
+
+LEADERSHIP EXPERIENCE
+
+Executive Board Member | Graduate Representative Organization - Student governance body representing engineering and arts & sciences graduate students at Johns Hopkins | Johns Hopkins University | Aug  2025 - Present
+Directed operations for the university’s largest graduate organization, overseeing student advocacy and event planning for a diverse population of 2,500+ graduate students.
+Directed a cross-functional body of 35+ representatives, aligning disparate departmental interests to create a unified advocacy front.
+Spearheaded the end-to-end execution of high-impact events for 2,000+ attendees, managing a budget of $40,000+ and achieving a 20% increase in student engagement compared to previous years.
+Synthesized qualitative student data into structured policy frameworks, delivering recommendations to University Administration to shape campus-wide advocacy.
+Cultivated a network of institutional and external partners, streamlining vendor management and co-sponsored initiatives to enhance the organization’s brand reach and resource pool.
+
+Consultant | Johns Hopkins Graduate Consulting Club - Graduate consulting club offering case prep, business training, and firm networking | Johns Hopkins University | Jan 2026 - Present
+Led 5-member product team in building an research-based market-sizing model for client, quantifying ~564K Voiceitt 2.0-supported patients and a $1.12B U.S. TAM using disease-level epidemiology and severity stratification.
+Quantified and ranked monetization potential across target indications, concentrating GTM efforts on TBI (~$798M TAM) and Parkinson’s (~$267M TAM) as the largest scalable pools.
+Built a citation-backed expansion pipeline of 23 additional neuro/rare diseases with prevalence- and severity-weighted demand assumptions, strengthening the growth thesis and reducing concentration risk beyond core cohorts.
+Established and led weekly governance across a 4-month engagement (scope, deliverables, risk flags, and QA); ran regular client meetings; and delivered presentations to improve delivery reliability and ensure on-time strategic recommendations.
+
+Director | Johns Hopkins Product Management Club - Student organization developing product management skills through projects, events, and industry networking | Johns Hopkins University | Aug 2025 - Dec 2025
+Led a 5-person consulting team to develop a comprehensive Business Model Canvas for an AR/VR startup; conducted deep-dive competitor analysis and proposed pricing models to define a profitable Go-to-Market (GTM) strategy.
+Spearheaded a multi-channel outreach strategy that increased club visibility by 30%; built and leveraged partnerships with departments and technical clubs to drive inclusive member participation.
+Led end-to-end execution of 5+ marketing and outreach efforts from planning, operations, marketing and execution. 
+
+Co-President | Johns Hopkins University Consulting Club - Student organization preparing members for consulting careers through training and recruiter engagement | Johns Hopkins University | Aug 2025 - Present
+Managed the end-to-end execution of 6+ events, ranging from firm-sponsored info sessions to technical skill-building workshops, to align student readiness with the hiring timeline.
+Cultivated partnerships with consulting firms, university faculty, and the career center to deliver recruitment events and industry-specific skill-building workshops.
+Launched JHU’s inaugural Intercollegiate Case Competition, coordinating branding, marketing, and case design for 25+ teams from 4+ universities with judges from Bain and Pfizer.
+
+Partner, Data Analytics | Breezwei - Student-led consulting initiative providing pro bono financial advisory to sustainability startups | Johns Hopkins University | Aug 2025 - Present
+Leading the Data Analytics workstream within a financial consulting framework to optimize the investment-readiness of sustainability-focused startups for venture capital scrutiny.
+Established a strategic sourcing pipeline by formalizing partnerships with the university incubator and Energy Research Institute to identify and vet high-potential sustainability ventures.
+Collaborated on a Go-to-Market (GTM) strategy for a sustainable concrete startup, conducting price sensitivity and elasticity analysis to maximize market penetration and revenue potential.
+
+Consultant | Aquipor project from Breezwei - Climate tech startup developing permeable concrete and stormwater infrastructure solutions | Johns Hopkins University | Aug 2025 - Dec 2025
+Led a 5 person consulting team for AquiPor, developing pricing and market-entry strategy for $10M revenue opportunity that improved projected gross margins from 35% to 45% and reduced product-market-fit timeline from 18 to 12 months through competitive positioning analysis.
+Built comprehensive market research and 5-year financial models across 3 customer segments, creating a commercialization roadmap showing $25M Year 5 revenue potential and $8M EBITDA, providing leadership with a data-driven framework for Series A fundraising decisions.
+Recommended public-sector-first GTM strategy targeting $2.3B municipal stormwater market opportunity, demonstrating 20-30% pricing premium feasibility versus traditional solutions and securing C-suite commitment to 3 pilot programs and $500K initial commercialization budget.
+
+Consultant | DWaste project from Breezwei - AI-powered waste-sorting platform using computer vision and gamification to improve recycling behavior and waste analytics | Johns Hopkins University | Jan 2026 - Present
+Led a 5-member team in a strategy consulting engagement for DWaste, an AI waste-management startup; rebuilt the company's market case using 23+ verified third-party sources, defining a defensible $660M U.S. TAM and $89M-$134M SAM across 4 target segments (HE institutions, MRFs, corporate ESG, B2C), which gave the founding team a credible fact base for strategic positioning and investor discussions.
+Built a 3-year revenue and go-to-market model projecting $42M Year 3 revenue ($12M conservative B2B-only), reducing prior forecasts by 44% in Year 1 ($5M→$2.8M) and 16% in Year 3 ($50M→$42M) to improve investor credibility, equipping the co-founder with a sharper pricing, segmentation, and fundraising narrative for VC pitches and investor meetings.
+
+Event and Social Chair | Stand Up Comedy Club - We do standup comedy at Johns Hopkins, or at least try to | Johns Hopkins University | Apr 2025 - Present
+Scaled club visibility by designing and executing outreach initiatives; achieved a 300% increase in the performer base and expanded the club's digital and physical footprint across the university.
+Managed end-to-end execution of diversified event portfolio, including workshops, screenings, and collaborations, reaching 500+ participants and significantly increasing student engagement.
+Orchestrated partnership with multiple performing arts organizations to co-host large-scale productions, successfully attracting 300+ attendees through synchronized promotional efforts.
+Secured $10K Student Blue Jay Dialogue Innovation Fund grant for performance initiative using dance and comedy to explore cultural identity and foster campus dialogue.
+
+Director of Design and Marketing | Culture Show - The premier annual cultural showcase of Johns Hopkins | Johns Hopkins University | Jan 2025 - Apr 2025
+Led creative direction and marketing strategy for Johns Hopkins’ flagship performing arts showcase, engaging 15+ performance groups and attracting 500+ attendees
+Managed a team of designers to develop unified branding for the event through logo, merchandise, and promotional materials
+Partnered with operations leadership to coordinate 10+ volunteers and technical staff, achieving zero execution delays during a 3-hour live program 
+
+Student Ambassador| International Students at Hopkins - Community supporting international students through programming, advocacy, and campus integration | Johns Hopkins University | Oct 2024 - Present
+Part of the International Students at Hopkins team to lead university-wide initiatives enhancing international student experience, driving programs in orientation, community engagement and cultural inclusion
+Led and executed all operational aspects of international student events, including Movie Nights and Grocery Trips, with 35+ attendees, enhancing community network and support
+
+Member | Sustainable Hopkins Innovative Projects - Organization promoting environmental initiatives and sustainability programs at Johns Hopkins | Johns Hopkins University | Jan 2025 - Present
+Supported marketing and operations for a campus clothing drive, helping collect and organize 500+ donated items for community redistribution.
+Contributed to the planning and execution of a pop-up thrift store, assisting with inventory control and event logistics.
+Leading initiatives in the Food Recovery Project to coordinate surplus food collection from university vendors and facilitate its donation to local non-profits.
+
+Media and PR Coordinator | Abhyuday - IIT Bombay’s student-run social organization promoting social awareness through campaigns and events | Indian Institute of Technology, Bombay (IITB) | Aug 2019 - Feb 2020
+Served on the Media & PR team for India’s largest student-run social organization, overseeing promotion and stakeholder communications for social initiatives
+Managed 35+ college representatives across India, providing guidance to organize Abhyuday events such as health workshops, lake cleanups and letters to soldiers on their campuses
+Led outreach and drafted sponsorship proposals, securing partnerships and funding to support the organization’s flagship annual social festival
+
+PROJECT EXPERIENCE
+
+Vector DB vs Knowledge Graph Analysis for Hyper-Personal AI Assistants |Johns Hopkins University |Baltimore, MD | Jan 2025 - May 2025
+Built end-to-end RAG pipeline using LangChain, ChromaDB, and OpenAI GPT-4, implementing 6 text chunking strategies (TokenTextSplitter, SemanticChunker) to improve retrieval accuracy by 35% across 1000+ document chunks
+Developed knowledge graph system with GraphRAG and NetworkX, enabling entity extraction and semantic search across 500+ business entities, achieving 90% relevance scores in complex query processing
+Engineered vector database architecture using ChromaDB with OpenAI embeddings, processing 1300-character chunks through 8 chunking algorithms to optimize semantic similarity matching and reduce query latency by 40%
+Implemented conversational AI analysis framework using sentence transformers and entity recognition, building graph-based relationship mapping for chat data with sub-second response times across 200+ conversation entities
+
+Multi-Modal Lip Reading with Contextual Cue Integration|Johns Hopkins University |Baltimore, MD | Aug 2025 - Dec 2025
+Architected a PyTorch multimodal framework integrating audio (Mel-spectrograms), video (lip-sequences), and SBERT embeddings; achieved a 37% absolute accuracy gain over unimodal baselines via triple-modality fusion.
+Engineered a high-fidelity data pipeline for real-time Mel-spectrogram extraction and sequence normalization; synchronized multi-rate temporal resolutions to ensure precise alignment for attention-based fusion.
+Optimized deep architectures by benchmarking ResNet/VGG backbones against LSTM-Transformer hybrids; implemented early/mid/late attention fusion to maximize compute efficiency for real-time inference.
+Standardized MLOps infrastructure via a YAML-driven framework and automated model management; enabled reproducible hyperparameter sweeps and versioned checkpointing for 10+ distinct fusion strategies.
+
+AI Modeling for Water Quality Control | Indian Institute of Technology Bombay (IITB) | Mumbai, India | Jun 2023 - Sep 2023
+Processed and modeled sewage treatment plant data to analyze seasonal trends and to forecast crucial water quality parameters, resulting in R2 score of around .7 
+Applied ensemble methods and deep learning models (CNNs, GRUs, LSTMs), leading to a 25% increase in model performance for predicting water quality parameters
+Implemented multiple hyperparameter optimization algorithms including genetic and bayesian, further improving model performance by around 10%
+
+Quantifying Player Performance and Optimizing Team Selection in Fantasy T20 Cricket | Indian Institute of Technology, Bombay (IITB) | Mumbai, India | Jun 2023 - Aug 2023
+Analyzed 10+ key factors to derive custom player performance metrics to be used for optimizing team selection, improving performance by 20% 
+Designed and deployed a genetic algorithm for team selection, integrating problem-specific constraints and achieving accuracy over 60%
+Presented findings and methodology at National Conference on Multidisciplinary Design, Analysis and Optimization (NCMDAO) held at Indian Institute of Technology Guwahati (IITG) in Dec 2023
+
+Data Analysis of Composite Structures | Indian Institute of Technology, Bombay (IITB) | Mumbai, India | Sep 2020 - Nov 2020
+Analyzed stress-strain characteristics of composites using machine learning and deep learning models, employing Python packages such as numpy, pandas, scikit-learn, tensorflow, keras and matplotlib
+Modeled and evaluated Young’s Modulus and fracture points of materials using various regression algorithms
+Conducted comparative analysis of physical parameters based on composite configuration and composition
+
+Data Analysis of The Indian Premier League | Indian Institute of Technology, Bombay (IITB) | Mumbai India | April 2019 - May 2019
+Conducted exploratory data analysis and hypothesis testing on ball-by-ball dataset of Indian Premier League (IPL)
+Analyzed key game aspects including runs, wickets, boundaries, win percentages, and performance across various venues
+Utilized various python packages for comparative analysis of player and team performances and to visualize evolving trends
+
+E-commerce Product Management System | Self Project
+Developed a complete e-commerce backend system using Express.js and SQLite database, designing normalized database schema with product tables containing 8+ fields (title, artist, price, inventory, genre) to support vinyl record inventory management for 10+ product categories
+Implemented comprehensive CRUD operations for product management including create, read, update, and delete functionality, with proper database connection pooling and transaction handling to ensure data integrity across 100+ product records
+Built responsive frontend interface with vanilla JavaScript and CSS, integrating with SQLite database through RESTful API endpoints to provide real-time inventory updates and product search functionality, resulting in streamlined product management workflow
+
+Minimal Social Media Platform | Self Project
+Developed a real-time social media application using Firebase Firestore and Authentication, implementing user registration, Google OAuth integration, and secure session management
+Engineered advanced database queries with Firebase Firestore to implement time-based filtering (daily, weekly, monthly) and user-specific content retrieval, utilizing server timestamps and complex query optimization to handle 500+ posts with sub-second response times
+Built interactive UI components with vanilla JavaScript and CSS, implementing mood-based posting system with emoji selection, real-time post editing/deletion, and dynamic content rendering, while maintaining data consistency through Firebase's real-time listeners and automatic synchronization
+
+React Sales Dashboard | Self Project
+Developed a real-time sales analytics dashboard using React.js and Supabase PostgreSQL database, implementing live data synchronization with Supabase's real-time subscriptions to automatically update sales metrics and charts when new deals are added, reducing manual refresh requirements by 100%
+Engineered complex database queries using Supabase's PostgreSQL interface to aggregate sales data by deal categories, implementing SUM aggregations and ORDER BY clauses to generate dynamic bar charts with Chart.js, processing $50,000+ in quarterly sales data across multiple deal categories
+Built interactive data entry forms with React hooks and Supabase client library, implementing form validation and real-time database inserts to enable sales team members to add new deals directly through the dashboard, while maintaining referential integrity and data consistency across the PostgreSQL database
+
+ADDITIONAL ACTIVITIES
+
+Semi-finalist in the AstraZeneca National Healthcare Case Competition hosted by Johns Hopkins Carey Business School
+Member of the Stand Up Comedy Club, involved in writing, discussing jokes and performing in front of a live crowd
+
+SKILLS
+
+Technical Skills : Python, Javascript, Microsoft Excel, Tensorflow, Pandas, Scikit-Learn, Git, Linux, SQL, Google Cloud
+Industry Skills :  Deep Learning, Machine Learning, Frontend, Backend, Databases, Data Analysis, Optimization

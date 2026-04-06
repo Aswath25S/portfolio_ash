@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Aswath Suresh — portfolio spanning engineering, data, product, and community."
+    />
+    <title>Aswath Suresh — Orbital portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top">Aswath<span>.</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#education">Education</a>
+          <a href="#orbits">Disciplines</a>
+          <a href="#missions">Work</a>
+          <a href="#leadership">Leadership</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="hero-badge">Field notes · many lenses</p>
+            <h1 id="hero-name">Aswath Suresh</h1>
+            <p class="lede" id="hero-role">Engineer · Data · Product · Community</p>
+            <p id="hero-bio-1" class="lede" style="font-size: 1rem; max-width: 52ch"></p>
+            <p id="hero-bio-2" class="lede" style="font-size: 1rem; max-width: 52ch; margin-top: 0.75rem"></p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" id="cv-link" href="assets/Master.pdf" download>Download CV (PDF)</a>
+              <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="orbital">
+              <svg class="ring-svg" viewBox="0 0 400 400" role="presentation">
+                <defs>
+                  <linearGradient id="grad-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3ee8c7" stop-opacity="0.9" />
+                    <stop offset="100%" stop-color="#7b6cff" stop-opacity="0.35" />
+                  </linearGradient>
+                </defs>
+                <g class="ring-rotate">
+                  <ellipse
+                    cx="200"
+                    cy="200"
+                    rx="170"
+                    ry="110"
+                    fill="none"
+                    stroke="url(#grad-ring)"
+                    stroke-width="1.2"
+                    opacity="0.85"
+                  />
+                  <ellipse
+                    cx="200"
+                    cy="200"
+                    rx="130"
+                    ry="170"
+                    fill="none"
+                    stroke="rgba(244,162,97,0.35)"
+                    stroke-width="1"
+                    transform="rotate(54 200 200)"
+                  />
+                  <ellipse
+                    cx="200"
+                    cy="200"
+                    rx="155"
+                    ry="155"
+                    fill="none"
+                    stroke="rgba(255,255,255,0.08)"
+                    stroke-width="0.8"
+                    stroke-dasharray="6 10"
+                  />
+                </g>
+              </svg>
+              <div class="core">Orbit</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-kicker">Education</p>
+            <h2>Formation</h2>
+            <p>Coursework and credentials as listed in your résumé text.</p>
+          </header>
+          <div class="education-grid" id="education-grid"></div>
+        </div>
+      </section>
+
+      <section id="orbits">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-kicker">Disciplines</p>
+            <h2>Four orbits, one trajectory</h2>
+            <p>
+              Diverse experience reads noisy on a single résumé line—here it is grouped by how I actually
+              work, not by job title alone.
+            </p>
+          </header>
+          <div class="orbit-grid" id="orbit-grid"></div>
+        </div>
+      </section>
+
+      <section id="missions">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-kicker">Trajectory</p>
+            <h2>Work experience</h2>
+            <p>
+              Summaries aligned with resume/Master.extracted.txt; download the PDF for the formatted one-pager.
+            </p>
+          </header>
+          <div class="timeline" id="mission-list"></div>
+        </div>
+      </section>
+
+      <section id="leadership">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-kicker">Leadership</p>
+            <h2>Leadership &amp; programs</h2>
+            <p>Consulting, governance, creative direction, and community roles from your résumé.</p>
+          </header>
+          <div class="timeline" id="leadership-list"></div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-kicker">Projects</p>
+            <h2>Project experience</h2>
+            <p>Academic projects, research builds, and self-directed products.</p>
+          </header>
+          <div class="projects-grid" id="projects-grid"></div>
+          <div id="additional-wrap" style="margin-top: 2.5rem" hidden>
+            <p class="section-kicker" style="margin-bottom: 0.75rem">Additional activities</p>
+            <ul class="additional-list" id="additional-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-kicker">Capabilities</p>
+            <h2>Skills (résumé)</h2>
+            <p>Technical and industry skills copied from your résumé text.</p>
+          </header>
+          <div class="skills" id="skills-grid"></div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-kicker">Contact</p>
+            <h2>Establish link</h2>
+            <p>Best for opportunities, collaborations, and clear questions with context.</p>
+          </header>
+          <div class="contact-panel">
+            <div>
+              <h3>Direct</h3>
+              <p class="note">Contact fields match <code>resume/Master.extracted.txt</code> and <code>js/content.js</code>.</p>
+              <div class="contact-links" id="contact-links"></div>
+            </div>
+            <div>
+              <h3>Full detail</h3>
+              <p>Use the PDF for print layout; plain text lives in the repo as <code>resume/Master.extracted.txt</code>.</p>
+              <a class="btn btn-primary" id="cv-link-2" href="assets/Master.pdf" download>Download CV (PDF)</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <p>
+          © <span id="year"></span> Aswath Suresh. Copy from <code>resume/Master.extracted.txt</code> · edit
+          <code>portfolio_1/js/content.js</code>.
+        </p>
+        <p class="note">Design: orbital field journal · built for diverse paths without flattening them.</p>
+      </div>
+    </footer>
+
+    <script src="js/content.js"></script>
+    <script>
+      (function () {
+        function esc(s) {
+          return String(s == null ? "" : s)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+        }
+
+        var S = window.SITE;
+        if (!S) return;
+
+        document.getElementById("hero-name").textContent = S.name;
+        document.getElementById("hero-role").textContent = S.role;
+        var b = S.bio || [];
+        var hb1 = document.getElementById("hero-bio-1");
+        var hb2 = document.getElementById("hero-bio-2");
+        if (hb1 && b[0]) hb1.textContent = b[0];
+        if (hb2 && b[1]) hb2.textContent = b[1];
+
+        var cv = document.getElementById("cv-link");
+        var cv2 = document.getElementById("cv-link-2");
+        if (S.cvPath) {
+          if (cv) cv.href = S.cvPath;
+          if (cv2) cv2.href = S.cvPath;
+        }
+
+        var eg = document.getElementById("education-grid");
+        if (eg && S.education) {
+          eg.innerHTML = S.education
+            .map(function (e) {
+              return (
+                '<article class="edu-card"><h3>' +
+                esc(e.school) +
+                '</h3><p class="edu-loc">' +
+                esc(e.location) +
+                '</p><p class="deg">' +
+                esc(e.degree) +
+                '</p><p class="edu-meta">' +
+                esc(e.meta) +
+                '</p><p class="edu-courses"><strong>Courses:</strong> ' +
+                esc(e.courses) +
+                "</p></article>"
+              );
+            })
+            .join("");
+        }
+
+        var og = document.getElementById("orbit-grid");
+        if (og && S.orbits) {
+          og.innerHTML = S.orbits
+            .map(function (o) {
+              var tags = (o.tags || [])
+                .map(function (t) {
+                  return '<span class="tag">' + esc(t) + "</span>";
+                })
+                .join("");
+              return (
+                '<article class="orbit-card" data-orbit="' +
+                esc(o.id) +
+                '"><div class="glyph" aria-hidden="true">' +
+                esc(o.glyph) +
+                "</div><h3>" +
+                esc(o.label) +
+                "</h3><p>" +
+                esc(o.summary) +
+                '</p><div class="tag-row">' +
+                tags +
+                "</div></article>"
+              );
+            })
+            .join("");
+        }
+
+        function renderMissions(id, list) {
+          var el = document.getElementById(id);
+          if (!el || !list) return;
+          el.innerHTML = list
+            .map(function (m) {
+              return (
+                '<article class="mission"><div class="mission-meta"><div class="window">' +
+                esc(m.window) +
+                '</div><div>' +
+                esc(m.phase) +
+                "</div></div><div><h3>" +
+                esc(m.title) +
+                '</h3><p class="place">' +
+                esc(m.place) +
+                "</p><p>" +
+                esc(m.detail) +
+                "</p></div></article>"
+              );
+            })
+            .join("");
+        }
+
+        renderMissions("mission-list", S.missions);
+        renderMissions("leadership-list", S.leadership);
+
+        var pg = document.getElementById("projects-grid");
+        if (pg && S.projects) {
+          pg.innerHTML = S.projects
+            .map(function (p) {
+              var meta = esc(p.place);
+              if (p.window) meta += " · " + esc(p.window);
+              return (
+                '<article class="project-card"><h3>' +
+                esc(p.title) +
+                '</h3><p class="project-meta">' +
+                meta +
+                "</p><p>" +
+                esc(p.detail) +
+                "</p></article>"
+              );
+            })
+            .join("");
+        }
+
+        var aw = document.getElementById("additional-wrap");
+        var al = document.getElementById("additional-list");
+        if (aw && al && S.additional && S.additional.length) {
+          al.innerHTML = S.additional
+            .map(function (x) {
+              return "<li>" + esc(x) + "</li>";
+            })
+            .join("");
+          aw.hidden = false;
+        }
+
+        var sg = document.getElementById("skills-grid");
+        if (sg && S.skills && S.skills.columns) {
+          sg.innerHTML = S.skills.columns
+            .map(function (c) {
+              var items = (c.items || [])
+                .map(function (i) {
+                  return "<li>" + esc(i) + "</li>";
+                })
+                .join("");
+              return (
+                '<div class="skill-col"><h3>' + esc(c.title) + "</h3><ul>" + items + "</ul></div>"
+              );
+            })
+            .join("");
+        }
+
+        var cl = document.getElementById("contact-links");
+        if (cl) {
+          var phoneBlock = "";
+          if (S.phone && S.phoneTel) {
+            phoneBlock =
+              '<a href="tel:' +
+              esc(S.phoneTel) +
+              '">' +
+              esc(S.phone) +
+              "</a>";
+          }
+          cl.innerHTML =
+            phoneBlock +
+            '<a href="mailto:' +
+            esc(S.email) +
+            '">' +
+            esc(S.email) +
+            '</a><a href="' +
+            esc(S.linkedin) +
+            '" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>';
+        }
+      })();
+    </script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
