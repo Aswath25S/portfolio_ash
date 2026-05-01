@@ -1,6 +1,6 @@
 /**
- * Site copy — aligned with resume/Master.extracted.txt (source text).
- * PDF: assets/Master.pdf
+ * Site copy — aligned with resume/Master.extracted.txt (repo root).
+ * PDF paths are relative to version_1/index.html (cvPath → assets/Master.pdf).
  */
 window.SITE = {
   name: "Aswath Suresh",
