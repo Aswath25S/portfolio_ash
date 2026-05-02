@@ -292,6 +292,22 @@ body::before {
   border: 1px solid rgba(0, 245, 212, 0.35);
 }
 
+.hp-bar--interactive {
+  display: block;
+  padding: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.hp-bar--interactive:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
 .hp-bar__fill {
   height: 100%;
   width: 92%;
@@ -299,6 +315,15 @@ body::before {
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   animation: hp-shimmer 2.8s ease-in-out infinite;
   box-shadow: 0 0 12px var(--glow-pink);
+  transition: width 0.55s var(--ease-out), filter 0.35s ease;
+}
+
+.hp-bar__fill.is-overcharge {
+  width: 100%;
+  filter: brightness(1.35) saturate(1.2);
+  box-shadow:
+    0 0 16px var(--glow-pink),
+    0 0 28px var(--glow-cyan);
 }
 
 @keyframes hp-shimmer {
@@ -315,6 +340,17 @@ body::before {
   font-variant-numeric: tabular-nums;
   font-weight: 700;
   color: var(--accent-2);
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.hp-pct:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* Dock navigation */
@@ -1223,6 +1259,114 @@ main {
   background: var(--accent-2);
   vertical-align: middle;
   animation: dot-pulse 1.8s ease-in-out infinite;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.pulse-dot:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+.egg-footer {
+  cursor: help;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.2em;
+  color: var(--muted);
+}
+
+.egg-footer:hover {
+  color: var(--accent-2);
+}
+
+.egg-badge {
+  cursor: pointer;
+  user-select: none;
+}
+
+.egg-episode {
+  cursor: pointer;
+  user-select: none;
+}
+
+.egg-code {
+  cursor: copy;
+}
+
+.toast-root {
+  position: fixed;
+  bottom: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  pointer-events: none;
+  max-width: min(92vw, 420px);
+}
+
+@media (min-width: 901px) {
+  .toast-root {
+    bottom: 2rem;
+    right: 5rem;
+    left: auto;
+    transform: none;
+    align-items: flex-end;
+  }
+}
+
+.toast {
+  pointer-events: none;
+  padding: 0.65rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #0c0618;
+  background: linear-gradient(135deg, #fff9e6, #ffd6ec);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  box-shadow:
+    4px 4px 0 rgba(255, 45, 149, 0.35),
+    0 12px 40px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(12px) scale(0.96);
+  transition:
+    opacity 0.35s var(--ease-out),
+    transform 0.35s var(--ease-out);
+}
+
+.toast.is-show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+body.party-mode::before {
+  animation:
+    mesh-shift 6s ease-in-out infinite alternate,
+    party-rainbow 5s linear infinite;
+}
+
+@keyframes party-rainbow {
+  0% {
+    filter: hue-rotate(0deg) saturate(1.15);
+  }
+  100% {
+    filter: hue-rotate(360deg) saturate(1.35);
+  }
+}
+
+.top-bar__name.egg-name {
+  cursor: pointer;
+  user-select: none;
+}
+
+.hero__bubble.egg-bubble:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 4px;
+  border-radius: 12px;
 }
 
 @keyframes dot-pulse {
@@ -1280,6 +1424,16 @@ main {
   .hero__float-card,
   .hero__deco,
   .dock__link.is-active {
+    animation: none !important;
+  }
+
+  .glitch:hover::before,
+  .glitch:hover::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  body.party-mode::before {
     animation: none !important;
   }
 

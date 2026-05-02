@@ -30,15 +30,21 @@
 
     <header class="top-bar">
       <div class="top-bar__brand">
-        <span class="top-bar__badge">NEW ARC</span>
-        <span class="top-bar__name">Aswath Suresh</span>
+        <span class="top-bar__badge egg-badge">NEW ARC</span>
+        <span class="top-bar__name egg-name">Aswath Suresh</span>
       </div>
       <div class="top-bar__status" role="status">
-        <span class="hp-label">Motivation</span>
-        <div class="hp-bar" aria-hidden="true">
-          <div class="hp-bar__fill"></div>
-        </div>
-        <span class="hp-pct">∞%</span>
+          <span class="hp-label">Motivation</span>
+          <button
+            type="button"
+            class="hp-bar hp-bar--interactive egg-hp-bar"
+            aria-label="Boost motivation bar"
+          >
+            <div class="hp-bar__fill"></div>
+          </button>
+        <button type="button" class="hp-pct egg-infinity" aria-label="Motivation stat">
+          ∞%
+        </button>
       </div>
     </header>
 
@@ -89,24 +95,33 @@
       <section id="hero" class="hero section">
         <div class="hero__inner reveal is-visible">
           <p class="hero__episode">
-            <span class="hero__ep-num">EP. 2026</span>
+            <span class="hero__ep-num egg-episode">EP. 2026</span>
             <span class="hero__ep-title">The Data Wizard Returns</span>
           </p>
           <h1 class="hero__title">
             <span class="hero__title-line glitch" data-text="Aswath">Aswath</span>
-            <span class="hero__title-line hero__title-line--accent">Suresh</span>
+            <span
+              class="hero__title-line hero__title-line--accent glitch"
+              data-text="Suresh"
+              >Suresh</span
+            >
           </h1>
           <p class="hero__tag typewriter-wrap">
             <span class="typewriter" id="hero-tagline"></span>
           </p>
           <div class="hero__cta">
-            <a class="btn btn--primary" href="#contact">Summon me</a>
-            <a class="btn btn--ghost" href="./assets/Master.pdf" download
+            <a class="btn btn--primary egg-summon" href="#contact">Summon me</a>
+            <a
+              class="btn btn--ghost egg-pdf"
+              href="./assets/Master.pdf"
+              download
               >Grab scroll (PDF)</a
             >
           </div>
           <div class="hero__float-card">
-            <p class="hero__bubble">Side character → main plot energy.</p>
+            <p class="hero__bubble egg-bubble" tabindex="0">
+              Side character → main plot energy.
+            </p>
           </div>
         </div>
         <div class="hero__deco hero__deco--left" aria-hidden="true"></div>
@@ -160,8 +175,8 @@
           </p>
           <p class="copy copy--last">
             Plain-text résumé source:
-            <code class="inline-code">resume/Master.extracted.txt</code> in
-            this repo; download the PDF from the links section below.
+              <code class="inline-code egg-code">resume/Master.extracted.txt</code> in
+              this repo; download the PDF from the links section below.
           </p>
         </div>
       </section>
@@ -466,12 +481,15 @@
         </nav>
         <footer class="site-footer">
           <p class="site-footer__line">
-            <span class="pulse-dot"></span>
-            Open to selective roles · Baltimore, MD · Made with too much CSS
+            <button type="button" class="pulse-dot egg-dot" aria-label="Status pulse"></button>
+            Open to selective roles · Baltimore, MD · Made with
+            <span class="egg-footer">too much CSS</span>
           </p>
         </footer>
       </section>
     </main>
+
+    <div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="true"></div>
 
     <script src="./js/app.js"></script>
   </body>
