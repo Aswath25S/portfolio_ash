@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aswath Suresh | Terminal Portfolio</title>
+    <meta
+      name="description"
+      content="Aswath Suresh — M.S. Data Science (JHU), AI platforms, quantitative NLP, full-stack. Baltimore, MD."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="shell">
+      <header class="shell__header">
+        <div class="dots" aria-hidden="true">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+        </div>
+        <p class="path">aswath@jhu:~/portfolio</p>
+      </header>
+
+      <main class="shell__body">
+        <div class="identity">
+          <h1 class="name">Aswath Suresh</h1>
+          <p class="tagline">
+            M.S. Data Science (JHU, May 2026) · B.Tech Aerospace (IIT Bombay) ·
+            Baltimore, MD — healthcare AI platforms, quantitative NLP, and
+            full-stack data systems.
+          </p>
+        </div>
+
+        <p class="module-hint">
+          <span class="prompt">$</span>
+          <span class="command command--live" id="command-display"></span>
+        </p>
+
+        <nav
+          class="module-nav"
+          role="tablist"
+          aria-label="Portfolio sections"
+        >
+          <button
+            type="button"
+            class="module-nav__btn is-active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-home"
+            id="tab-home"
+            data-panel="home"
+            data-command="help"
+          >
+            ./home
+          </button>
+          <button
+            type="button"
+            class="module-nav__btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-contact"
+            id="tab-contact"
+            data-panel="contact"
+            data-command="cat contact.txt"
+          >
+            ./contact
+          </button>
+          <button
+            type="button"
+            class="module-nav__btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-about"
+            id="tab-about"
+            data-panel="about"
+            data-command="cat profile.txt"
+          >
+            ./about
+          </button>
+          <button
+            type="button"
+            class="module-nav__btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-education"
+            id="tab-education"
+            data-panel="education"
+            data-command="cat education.log"
+          >
+            ./education
+          </button>
+          <button
+            type="button"
+            class="module-nav__btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-experience"
+            id="tab-experience"
+            data-panel="experience"
+            data-command="ls -la ./experience"
+          >
+            ./experience
+          </button>
+          <button
+            type="button"
+            class="module-nav__btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-projects"
+            id="tab-projects"
+            data-panel="projects"
+            data-command="ls ./projects"
+          >
+            ./projects
+          </button>
+          <button
+            type="button"
+            class="module-nav__btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-leadership"
+            id="tab-leadership"
+            data-panel="leadership"
+            data-command="ls ./leadership"
+          >
+            ./leadership
+          </button>
+          <button
+            type="button"
+            class="module-nav__btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-skills"
+            id="tab-skills"
+            data-panel="skills"
+            data-command="cat ./skills.txt"
+          >
+            ./skills
+          </button>
+          <button
+            type="button"
+            class="module-nav__btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-extras"
+            id="tab-extras"
+            data-panel="extras"
+            data-command="cat ./notes.txt"
+          >
+            ./extras
+          </button>
+          <button
+            type="button"
+            class="module-nav__btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-links"
+            id="tab-links"
+            data-panel="links"
+            data-command="open links"
+          >
+            ./links
+          </button>
+        </nav>
+
+        <div class="panels">
+          <section
+            id="panel-home"
+            class="panel is-active"
+            role="tabpanel"
+            aria-labelledby="tab-home"
+            tabindex="-1"
+          >
+            <div class="line">
+              <span class="prompt">$</span>
+              <span class="command">whoami</span>
+            </div>
+            <p class="panel-lead">
+              Welcome. Pick a module above — each opens a different slice of the
+              résumé. This view stays minimal on purpose.
+            </p>
+          </section>
+
+          <section
+            id="panel-contact"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-contact"
+            tabindex="-1"
+            hidden
+          >
+            <ul class="contact-list contact-list--panel">
+              <li>
+                <span class="contact-list__key">email</span>
+                <a href="mailto:aswathsureshjhu@gmail.com"
+                  >aswathsureshjhu@gmail.com</a
+                >
+              </li>
+              <li>
+                <span class="contact-list__key">phone</span>
+                <a href="tel:+14104937355">+1 (410) 493-7355</a>
+              </li>
+              <li>
+                <span class="contact-list__key">linkedin</span>
+                <a
+                  href="https://www.linkedin.com/in/aswathsuresh25"
+                  rel="noopener noreferrer"
+                  >linkedin.com/in/aswathsuresh25</a
+                >
+              </li>
+            </ul>
+          </section>
+
+          <section
+            id="panel-about"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-about"
+            tabindex="-1"
+            hidden
+          >
+            <p class="copy">
+              M.S. in Data Science at Johns Hopkins (GPA 3.94, May 2026) and
+              B.Tech in Aerospace Engineering from IIT Bombay (GPA 3.32, May
+              2022). I build healthcare AI platforms, quantitative NLP for
+              trading, and data/ML systems — with consulting, product org
+              leadership, and campus programs.
+            </p>
+            <p class="copy copy--last">
+              Plain-text résumé source:
+              <code class="inline-code">resume/Master.extracted.txt</code> in
+              this repo; download the PDF from <strong>./links</strong>.
+            </p>
+          </section>
+
+          <section
+            id="panel-education"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-education"
+            tabindex="-1"
+            hidden
+          >
+            <div class="stack stack--edu">
+              <article class="edu-block">
+                <h2 class="edu-block__school">Johns Hopkins University</h2>
+                <p class="edu-block__meta">
+                  Baltimore, MD · Master of Science in Data Science · GPA 3.94/4
+                  · May 2026
+                </p>
+                <p class="edu-block__courses">
+                  Courses: Introduction to Data Science, Investment Science,
+                  Computing for Applied Mathematics, Statistical Methods and Data
+                  Analysis, Computer Vision, Artificial Intelligence, Deep
+                  Learning
+                </p>
+              </article>
+              <article class="edu-block">
+                <h2 class="edu-block__school">
+                  Indian Institute of Technology Bombay (IITB)
+                </h2>
+                <p class="edu-block__meta">
+                  Mumbai, India · Bachelor of Technology in Aerospace Engineering
+                  · GPA 3.32/4 · May 2022
+                </p>
+                <p class="edu-block__courses">
+                  Courses: Data Analysis and Interpretation, Economics, Machine
+                  Learning Based Uncertainty Quantification for Composites
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section
+            id="panel-experience"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-experience"
+            tabindex="-1"
+            hidden
+          >
+            <h2 class="section-label">./experience/current</h2>
+            <div class="exp-block">
+              <header class="exp-block__head">
+                <span class="exp-block__title">Founding Engineer</span>
+                <span class="exp-block__org">EligioAI</span>
+                <span class="exp-block__loc">Baltimore, MD</span>
+                <span class="exp-block__dates">Jan 2026 — Present</span>
+              </header>
+              <p class="exp-block__tag">
+                AI platform for patient triage and clinician scheduling.
+              </p>
+              <ul class="bullets">
+                <li>
+                  Architected and deployed scalable AI-powered patient triaging:
+                  production React (Tailwind CSS, Radix UI) + Python Flask
+                  backend with OpenAI integration.
+                </li>
+                <li>
+                  Designed JWT authentication, REST APIs, and RBAC for PHI-safe
+                  flows across registration, login, and protected routes.
+                </li>
+                <li>
+                  Built secure medical document ingestion (PDF/image) with
+                  categorization and SQLAlchemy-backed storage; led migration
+                  from Lovable MVP to full-stack with real-time chat.
+                </li>
+              </ul>
+            </div>
+            <div class="exp-block">
+              <header class="exp-block__head">
+                <span class="exp-block__title">Data Scientist</span>
+                <span class="exp-block__org">Campbell</span>
+                <span class="exp-block__loc">Baltimore, MD</span>
+                <span class="exp-block__dates">Jan 2026 — Present</span>
+              </header>
+              <p class="exp-block__tag">
+                Quantitative investment firm — systematic futures and equities.
+              </p>
+              <ul class="bullets">
+                <li>
+                  FinBERT sentiment pipeline: 50+ articles/query, 95%+
+                  extraction success on gold/crude oil markets.
+                </li>
+                <li>
+                  Modular Python + automated CSV pipelines: ~80% faster
+                  analysis, 1000+ articles/day.
+                </li>
+                <li>
+                  Hugging Face + PyTorch inference (~90%+ accuracy, 512-token
+                  chunking); end-to-end news → trading signal platform.
+                </li>
+              </ul>
+            </div>
+
+            <h2 class="section-label">./experience/earlier</h2>
+            <ul class="compact-list">
+              <li>
+                <strong>Data Science Intern</strong> · Costac · Dec 2024 — Jan
+                2025 — revenue/behavior ML (R² 0.85), viz &amp; stats,
+                RNN/LSTM/GRU time series (MAPE 8.5%).
+              </li>
+              <li>
+                <strong>Research Intern</strong> · IIT Madras · Feb — May 2024
+                — AR/VR for high-dimensional data; Unity prototypes;
+                literature review (20+ papers).
+              </li>
+              <li>
+                <strong>Software Developer</strong> · Teachmint · Jun 2022 —
+                Jun 2023 — Python backend scale (−50% response times); unified
+                Flask APIs; MongoDB migration (1M+ records); React + Flask + GCP
+                features.
+              </li>
+              <li>
+                <strong>Software Intern</strong> · Jobsage.ai · Jun — Jul 2021
+                — hiring-info extraction to GCP; Flask API + MySQL cron for
+                promo validity (~15% revenue savings).
+              </li>
+              <li>
+                <strong>Machine Learning Intern</strong> · Sustlabs · Apr —
+                Jun 2020 — 2M-point load forecasting; Kafka streaming;
+                InfluxDB, Grafana, WandB.
+              </li>
+              <li>
+                <strong>Data Science Intern</strong> · Floww · Dec 2019 — Jan
+                2020 — scraping, pandas, Sheets collaboration, mileage ML
+                models.
+              </li>
+              <li>
+                <strong>Member, Software Subsystem</strong> · Rakshak (IITB
+                UAV) · Oct 2018 — Dec 2019 — OpenCV datasets;
+                TensorFlow/Keras; U-Net segmentation.
+              </li>
+            </ul>
+          </section>
+
+          <section
+            id="panel-projects"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-projects"
+            tabindex="-1"
+            hidden
+          >
+            <ul class="project-list">
+              <li>
+                <span class="project-list__name"
+                  >Vector DB vs Knowledge Graph (Hyper-Personal AI)</span
+                >
+                — RAG (LangChain, ChromaDB, GPT-4), GraphRAG/NetworkX, −40%
+                query latency, 200+ conversation entities (JHU · Jan — May
+                2025).
+              </li>
+              <li>
+                <span class="project-list__name"
+                  >Multi-Modal Lip Reading + Contextual Cues</span
+                >
+                — PyTorch audio/video/SBERT fusion (+37% vs unimodal); MLOps
+                YAML framework (JHU · Aug — Dec 2025).
+              </li>
+              <li>
+                <span class="project-list__name"
+                  >AI Modeling for Water Quality</span
+                >
+                — IITB sewage treatment forecasting (R² ~0.7); CNN/GRU/LSTM +
+                ensemble/HPO (Jun — Sep 2023).
+              </li>
+              <li>
+                <span class="project-list__name"
+                  >Fantasy T20 Cricket Analytics</span
+                >
+                — custom metrics + genetic team selection; NCMDAO @ IIT
+                Guwahati Dec 2023 (Jun — Aug 2023).
+              </li>
+              <li>
+                <span class="project-list__name">Composite Structures ML</span>
+                — stress–strain modeling with sklearn/TF/Keras (Sep — Nov
+                2020).
+              </li>
+              <li>
+                <span class="project-list__name">IPL Ball-by-Ball Analysis</span>
+                — EDA &amp; hypothesis tests on IPL dataset (Apr — May 2019).
+              </li>
+              <li>
+                <span class="project-list__name">E-commerce Backend</span> —
+                Express.js + SQLite vinyl inventory; CRUD + vanilla JS UI
+                (self).
+              </li>
+              <li>
+                <span class="project-list__name">Minimal Social (Firebase)</span>
+                — Firestore auth, 500+ posts, real-time filters (self).
+              </li>
+              <li>
+                <span class="project-list__name">React Sales Dashboard</span> —
+                React + Supabase real-time; Chart.js; $50k+ quarterly data
+                modeled (self).
+              </li>
+            </ul>
+          </section>
+
+          <section
+            id="panel-leadership"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-leadership"
+            tabindex="-1"
+            hidden
+          >
+            <ul class="compact-list compact-list--tight">
+              <li>
+                <strong>Executive Board</strong> · Graduate Representative
+                Organization (JHU) — advocacy &amp; events for 2,500+ grads;
+                $40k+ programming (Aug 2025 — Present).
+              </li>
+              <li>
+                <strong>Consultant</strong> · JH Graduate Consulting Club —
+                Voiceitt 2.0 market sizing (~564K patients, $1.12B U.S. TAM)
+                (Jan 2026 — Present).
+              </li>
+              <li>
+                <strong>Director</strong> · JH Product Management Club — AR/VR
+                BMC, GTM, outreach (+30% visibility) (Aug — Dec 2025).
+              </li>
+              <li>
+                <strong>Co-President</strong> · JH Consulting Club — inaugural
+                intercollegiate case competition (25+ teams) (Aug 2025 —
+                Present).
+              </li>
+              <li>
+                <strong>Partner, Data Analytics</strong> · Breezwei —
+                sustainability startup advisory; Aquipor &amp; DWaste strategy
+                engagements (Aug 2025 — Present).
+              </li>
+              <li>
+                <strong>Event &amp; Social Chair</strong> · Stand Up Comedy
+                Club; <strong>Director, Design &amp; Marketing</strong> ·
+                Culture Show; <strong>Student Ambassador</strong> · International
+                Students at Hopkins; <strong>Member</strong> · Sustainable
+                Hopkins; plus IIT Abhyuday Media &amp; PR — see résumé for
+                detail.
+              </li>
+            </ul>
+          </section>
+
+          <section
+            id="panel-skills"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-skills"
+            tabindex="-1"
+            hidden
+          >
+            <div class="skill-grid">
+              <div class="skill-group">
+                <h3 class="skill-group__title">Technical</h3>
+                <ul class="skills">
+                  <li>Python</li>
+                  <li>JavaScript</li>
+                  <li>Microsoft Excel</li>
+                  <li>TensorFlow</li>
+                  <li>Pandas</li>
+                  <li>scikit-learn</li>
+                  <li>Git</li>
+                  <li>Linux</li>
+                  <li>SQL</li>
+                  <li>Google Cloud</li>
+                </ul>
+              </div>
+              <div class="skill-group">
+                <h3 class="skill-group__title">Industry</h3>
+                <ul class="skills">
+                  <li>Deep Learning</li>
+                  <li>Machine Learning</li>
+                  <li>Frontend</li>
+                  <li>Backend</li>
+                  <li>Databases</li>
+                  <li>Data Analysis</li>
+                  <li>Optimization</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="panel-extras"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-extras"
+            tabindex="-1"
+            hidden
+          >
+            <ul class="notes-list">
+              <li>
+                Semi-finalist — AstraZeneca National Healthcare Case Competition
+                (JH Carey Business School).
+              </li>
+              <li>
+                Stand Up Comedy Club — writing, workshops, live performance.
+              </li>
+            </ul>
+          </section>
+
+          <section
+            id="panel-links"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-links"
+            tabindex="-1"
+            hidden
+          >
+            <nav class="links">
+              <a
+                href="https://www.linkedin.com/in/aswathsuresh25"
+                rel="noopener noreferrer"
+                aria-label="Open LinkedIn profile"
+                >LinkedIn</a
+              >
+              <a href="mailto:aswathsureshjhu@gmail.com" aria-label="Send email"
+                >Email</a
+              >
+              <a href="tel:+14104937355" aria-label="Call phone">Phone</a>
+              <a
+                href="./assets/Master.pdf"
+                download
+                aria-label="Download résumé PDF"
+                >Résumé PDF</a
+              >
+            </nav>
+          </section>
+        </div>
+      </main>
+
+      <footer class="shell__footer">
+        <p>
+          <span class="status-dot" aria-hidden="true"></span>status: open to
+          selective roles · Baltimore, MD
+        </p>
+      </footer>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
