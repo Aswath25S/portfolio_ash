@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aswath Suresh — Adventure Log</title>
+    <meta
+      name="description"
+      content="Aswath Suresh — M.S. Data Science (JHU), AI platforms, NLP, full-stack. A playful portfolio inspired by anime & games."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Outfit:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <canvas id="starfield" class="starfield" aria-hidden="true"></canvas>
+    <div class="sakura" aria-hidden="true">
+      <span class="petal petal--a"></span>
+      <span class="petal petal--b"></span>
+      <span class="petal petal--c"></span>
+      <span class="petal petal--d"></span>
+      <span class="petal petal--e"></span>
+    </div>
+    <div class="speed-lines" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="top-bar">
+      <div class="top-bar__brand">
+        <span class="top-bar__badge">NEW ARC</span>
+        <span class="top-bar__name">Aswath Suresh</span>
+      </div>
+      <div class="top-bar__status" role="status">
+        <span class="hp-label">Motivation</span>
+        <div class="hp-bar" aria-hidden="true">
+          <div class="hp-bar__fill"></div>
+        </div>
+        <span class="hp-pct">∞%</span>
+      </div>
+    </header>
+
+    <nav class="dock" aria-label="Section navigation">
+      <a class="dock__link is-active" href="#hero" data-section="hero">
+        <span class="dock__glyph">✦</span>
+        <span class="dock__text">Start</span>
+      </a>
+      <a class="dock__link" href="#contact" data-section="contact">
+        <span class="dock__glyph">✉</span>
+        <span class="dock__text">Contact</span>
+      </a>
+      <a class="dock__link" href="#about" data-section="about">
+        <span class="dock__glyph">◇</span>
+        <span class="dock__text">Profile</span>
+      </a>
+      <a class="dock__link" href="#education" data-section="education">
+        <span class="dock__glyph">▣</span>
+        <span class="dock__text">School</span>
+      </a>
+      <a class="dock__link" href="#experience" data-section="experience">
+        <span class="dock__glyph">⚔</span>
+        <span class="dock__text">Quests</span>
+      </a>
+      <a class="dock__link" href="#projects" data-section="projects">
+        <span class="dock__glyph">★</span>
+        <span class="dock__text">Artifacts</span>
+      </a>
+      <a class="dock__link" href="#leadership" data-section="leadership">
+        <span class="dock__glyph">◎</span>
+        <span class="dock__text">Guild</span>
+      </a>
+      <a class="dock__link" href="#skills" data-section="skills">
+        <span class="dock__glyph">⬡</span>
+        <span class="dock__text">Skills</span>
+      </a>
+      <a class="dock__link" href="#extras" data-section="extras">
+        <span class="dock__glyph">♪</span>
+        <span class="dock__text">Side</span>
+      </a>
+      <a class="dock__link" href="#links" data-section="links">
+        <span class="dock__glyph">→</span>
+        <span class="dock__text">Links</span>
+      </a>
+    </nav>
+
+    <main id="main">
+      <section id="hero" class="hero section">
+        <div class="hero__inner reveal is-visible">
+          <p class="hero__episode">
+            <span class="hero__ep-num">EP. 2026</span>
+            <span class="hero__ep-title">The Data Wizard Returns</span>
+          </p>
+          <h1 class="hero__title">
+            <span class="hero__title-line glitch" data-text="Aswath">Aswath</span>
+            <span class="hero__title-line hero__title-line--accent">Suresh</span>
+          </h1>
+          <p class="hero__tag typewriter-wrap">
+            <span class="typewriter" id="hero-tagline"></span>
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#contact">Summon me</a>
+            <a class="btn btn--ghost" href="./assets/Master.pdf" download
+              >Grab scroll (PDF)</a
+            >
+          </div>
+          <div class="hero__float-card">
+            <p class="hero__bubble">Side character → main plot energy.</p>
+          </div>
+        </div>
+        <div class="hero__deco hero__deco--left" aria-hidden="true"></div>
+        <div class="hero__deco hero__deco--right" aria-hidden="true"></div>
+      </section>
+
+      <section id="contact" class="section section--tight">
+        <div class="section-head reveal">
+          <h2 class="section-head__title">
+            <span class="section-head__jp">連絡先</span>
+            Contact coordinates
+          </h2>
+          <p class="section-head__sub">Fastest routes to reach this player.</p>
+        </div>
+        <ul class="contact-cards">
+          <li class="contact-card reveal reveal--delay-1">
+            <span class="contact-card__label">email</span>
+            <a href="mailto:aswathsureshjhu@gmail.com"
+              >aswathsureshjhu@gmail.com</a
+            >
+          </li>
+          <li class="contact-card reveal reveal--delay-2">
+            <span class="contact-card__label">phone</span>
+            <a href="tel:+14104937355">+1 (410) 493-7355</a>
+          </li>
+          <li class="contact-card reveal reveal--delay-3">
+            <span class="contact-card__label">linkedin</span>
+            <a
+              href="https://www.linkedin.com/in/aswathsuresh25"
+              rel="noopener noreferrer"
+              >linkedin.com/in/aswathsuresh25</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-head reveal">
+          <h2 class="section-head__title">
+            <span class="section-head__jp">プロフィール</span>
+            Character sheet
+          </h2>
+        </div>
+        <div class="panel panel--glow reveal">
+          <p class="copy">
+            M.S. in Data Science at Johns Hopkins (GPA 3.94, May 2026) and
+            B.Tech in Aerospace Engineering from IIT Bombay (GPA 3.32, May
+            2022). I build healthcare AI platforms, quantitative NLP for
+            trading, and data/ML systems — with consulting, product org
+            leadership, and campus programs.
+          </p>
+          <p class="copy copy--last">
+            Plain-text résumé source:
+            <code class="inline-code">resume/Master.extracted.txt</code> in
+            this repo; download the PDF from the links section below.
+          </p>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="section-head reveal">
+          <h2 class="section-head__title">
+            <span class="section-head__jp">学歴</span>
+            Training arc
+          </h2>
+        </div>
+        <div class="edu-grid">
+          <article class="edu-card reveal">
+            <div class="edu-card__shine"></div>
+            <h3 class="edu-card__school">Johns Hopkins University</h3>
+            <p class="edu-card__meta">
+              Baltimore, MD · M.S. Data Science · GPA 3.94 · May 2026
+            </p>
+            <p class="edu-card__courses">
+              Courses: Introduction to Data Science, Investment Science,
+              Computing for Applied Mathematics, Statistical Methods and Data
+              Analysis, Computer Vision, Artificial Intelligence, Deep Learning
+            </p>
+          </article>
+          <article class="edu-card reveal reveal--delay-1">
+            <div class="edu-card__shine"></div>
+            <h3 class="edu-card__school">IIT Bombay</h3>
+            <p class="edu-card__meta">
+              Mumbai, India · B.Tech Aerospace · GPA 3.32 · May 2022
+            </p>
+            <p class="edu-card__courses">
+              Courses: Data Analysis and Interpretation, Economics, Machine
+              Learning Based Uncertainty Quantification for Composites
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="section-head reveal">
+          <h2 class="section-head__title">
+            <span class="section-head__jp">経験</span>
+            Main quests
+          </h2>
+        </div>
+
+        <h3 class="tier-label reveal">Current arc</h3>
+        <article class="quest-card reveal">
+          <header class="quest-card__head">
+            <span class="quest-card__title">Founding Engineer</span>
+            <span class="quest-card__org">EligioAI</span>
+            <span class="quest-card__meta">Baltimore · Jan 2026 — Present</span>
+          </header>
+          <p class="quest-card__tag">
+            AI platform for patient triage and clinician scheduling.
+          </p>
+          <ul class="bullets">
+            <li>
+              Architected and deployed scalable AI-powered patient triaging:
+              production React (Tailwind CSS, Radix UI) + Python Flask backend
+              with OpenAI integration.
+            </li>
+            <li>
+              Designed JWT authentication, REST APIs, and RBAC for PHI-safe flows
+              across registration, login, and protected routes.
+            </li>
+            <li>
+              Built secure medical document ingestion (PDF/image) with
+              categorization and SQLAlchemy-backed storage; led migration from
+              Lovable MVP to full-stack with real-time chat.
+            </li>
+          </ul>
+        </article>
+
+        <article class="quest-card reveal">
+          <header class="quest-card__head">
+            <span class="quest-card__title">Data Scientist</span>
+            <span class="quest-card__org">Campbell</span>
+            <span class="quest-card__meta">Baltimore · Jan 2026 — Present</span>
+          </header>
+          <p class="quest-card__tag">
+            Quantitative investment firm — systematic futures and equities.
+          </p>
+          <ul class="bullets">
+            <li>
+              FinBERT sentiment pipeline: 50+ articles/query, 95%+ extraction
+              success on gold/crude oil markets.
+            </li>
+            <li>
+              Modular Python + automated CSV pipelines: ~80% faster analysis,
+              1000+ articles/day.
+            </li>
+            <li>
+              Hugging Face + PyTorch inference (~90%+ accuracy, 512-token
+              chunking); end-to-end news → trading signal platform.
+            </li>
+          </ul>
+        </article>
+
+        <h3 class="tier-label reveal">Earlier episodes</h3>
+        <ul class="compact-list reveal">
+          <li>
+            <strong>Data Science Intern</strong> · Costac · Dec 2024 — Jan 2025
+            — revenue/behavior ML (R² 0.85), viz &amp; stats,
+            RNN/LSTM/GRU time series (MAPE 8.5%).
+          </li>
+          <li>
+            <strong>Research Intern</strong> · IIT Madras · Feb — May 2024 —
+            AR/VR for high-dimensional data; Unity prototypes; literature
+            review (20+ papers).
+          </li>
+          <li>
+            <strong>Software Developer</strong> · Teachmint · Jun 2022 — Jun
+            2023 — Python backend scale (−50% response times); unified Flask
+            APIs; MongoDB migration (1M+ records); React + Flask + GCP features.
+          </li>
+          <li>
+            <strong>Software Intern</strong> · Jobsage.ai · Jun — Jul 2021 —
+            hiring-info extraction to GCP; Flask API + MySQL cron for promo
+            validity (~15% revenue savings).
+          </li>
+          <li>
+            <strong>Machine Learning Intern</strong> · Sustlabs · Apr — Jun 2020
+            — 2M-point load forecasting; Kafka streaming; InfluxDB, Grafana,
+            WandB.
+          </li>
+          <li>
+            <strong>Data Science Intern</strong> · Floww · Dec 2019 — Jan 2020
+            — scraping, pandas, Sheets collaboration, mileage ML models.
+          </li>
+          <li>
+            <strong>Member, Software Subsystem</strong> · Rakshak (IIT UAV) ·
+            Oct 2018 — Dec 2019 — OpenCV datasets; TensorFlow/Keras; U-Net
+            segmentation.
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-head reveal">
+          <h2 class="section-head__title">
+            <span class="section-head__jp">作品</span>
+            Legendary artifacts
+          </h2>
+        </div>
+        <ul class="artifact-grid">
+          <li class="artifact reveal">
+            Vector DB vs Knowledge Graph (Hyper-Personal AI) — RAG (LangChain,
+            ChromaDB, GPT-4), GraphRAG/NetworkX, −40% query latency, 200+
+            conversation entities (JHU · Jan — May 2025).
+          </li>
+          <li class="artifact reveal reveal--delay-1">
+            Multi-Modal Lip Reading + Contextual Cues — PyTorch audio/video/SBERT
+            fusion (+37% vs unimodal); MLOps YAML framework (JHU · Aug — Dec
+            2025).
+          </li>
+          <li class="artifact reveal reveal--delay-2">
+            AI Modeling for Water Quality — IITB sewage treatment forecasting
+            (R² ~0.7); CNN/GRU/LSTM + ensemble/HPO (Jun — Sep 2023).
+          </li>
+          <li class="artifact reveal">
+            Fantasy T20 Cricket Analytics — custom metrics + genetic team
+            selection; NCMDAO @ IIT Guwahati Dec 2023 (Jun — Aug 2023).
+          </li>
+          <li class="artifact reveal reveal--delay-1">
+            Composite Structures ML — stress–strain modeling with
+            sklearn/TF/Keras (Sep — Nov 2020).
+          </li>
+          <li class="artifact reveal reveal--delay-2">
+            IPL Ball-by-Ball Analysis — EDA &amp; hypothesis tests on IPL
+            dataset (Apr — May 2019).
+          </li>
+          <li class="artifact reveal">
+            E-commerce Backend — Express.js + SQLite vinyl inventory; CRUD +
+            vanilla JS UI (self).
+          </li>
+          <li class="artifact reveal reveal--delay-1">
+            Minimal Social (Firebase) — Firestore auth, 500+ posts, real-time
+            filters (self).
+          </li>
+          <li class="artifact reveal reveal--delay-2">
+            React Sales Dashboard — React + Supabase real-time; Chart.js; $50k+
+            quarterly data modeled (self).
+          </li>
+        </ul>
+      </section>
+
+      <section id="leadership" class="section">
+        <div class="section-head reveal">
+          <h2 class="section-head__title">
+            <span class="section-head__jp">ギルド</span>
+            Party buffs
+          </h2>
+        </div>
+        <ul class="guild-list">
+          <li class="guild-card reveal">
+            <strong>Executive Board</strong> · Graduate Representative
+            Organization (JHU) — advocacy &amp; events for 2,500+ grads; $40k+
+            programming (Aug 2025 — Present).
+          </li>
+          <li class="guild-card reveal reveal--delay-1">
+            <strong>Consultant</strong> · JH Graduate Consulting Club — Voiceitt
+            2.0 market sizing (~564K patients, $1.12B U.S. TAM) (Jan 2026 —
+            Present).
+          </li>
+          <li class="guild-card reveal reveal--delay-2">
+            <strong>Director</strong> · JH Product Management Club — AR/VR BMC,
+            GTM, outreach (+30% visibility) (Aug — Dec 2025).
+          </li>
+          <li class="guild-card reveal">
+            <strong>Co-President</strong> · JH Consulting Club — inaugural
+            intercollegiate case competition (25+ teams) (Aug 2025 — Present).
+          </li>
+          <li class="guild-card reveal reveal--delay-1">
+            <strong>Partner, Data Analytics</strong> · Breezwei — sustainability
+            startup advisory; Aquipor &amp; DWaste strategy engagements (Aug
+            2025 — Present).
+          </li>
+          <li class="guild-card reveal reveal--delay-2">
+            <strong>Event &amp; Social Chair</strong> · Stand Up Comedy Club;
+            <strong>Director, Design &amp; Marketing</strong> · Culture Show;
+            <strong>Student Ambassador</strong> · International Students at
+            Hopkins; <strong>Member</strong> · Sustainable Hopkins; plus IIT
+            Abhyuday Media &amp; PR — see résumé for detail.
+          </li>
+        </ul>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-head reveal">
+          <h2 class="section-head__title">
+            <span class="section-head__jp">ステータス</span>
+            Stat screen
+          </h2>
+        </div>
+        <div class="stat-board reveal">
+          <div class="stat-group">
+            <h3 class="stat-group__title">Technical</h3>
+            <ul class="stat-tags">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>Microsoft Excel</li>
+              <li>TensorFlow</li>
+              <li>Pandas</li>
+              <li>scikit-learn</li>
+              <li>Git</li>
+              <li>Linux</li>
+              <li>SQL</li>
+              <li>Google Cloud</li>
+            </ul>
+          </div>
+          <div class="stat-group">
+            <h3 class="stat-group__title">Industry</h3>
+            <ul class="stat-tags">
+              <li>Deep Learning</li>
+              <li>Machine Learning</li>
+              <li>Frontend</li>
+              <li>Backend</li>
+              <li>Databases</li>
+              <li>Data Analysis</li>
+              <li>Optimization</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="extras" class="section">
+        <div class="section-head reveal">
+          <h2 class="section-head__title">
+            <span class="section-head__jp">エキストラ</span>
+            Bonus scenes
+          </h2>
+        </div>
+        <ul class="notes-list">
+          <li class="reveal">
+            Semi-finalist — AstraZeneca National Healthcare Case Competition (JH
+            Carey Business School).
+          </li>
+          <li class="reveal reveal--delay-1">
+            Stand Up Comedy Club — writing, workshops, live performance.
+          </li>
+        </ul>
+      </section>
+
+      <section id="links" class="section section--footer-wave">
+        <div class="section-head reveal">
+          <h2 class="section-head__title">
+            <span class="section-head__jp">リンク</span>
+            Warp points
+          </h2>
+        </div>
+        <nav class="warp-links reveal" aria-label="External links">
+          <a
+            class="warp"
+            href="https://www.linkedin.com/in/aswathsuresh25"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a class="warp" href="mailto:aswathsureshjhu@gmail.com">Email</a>
+          <a class="warp" href="tel:+14104937355">Phone</a>
+          <a class="warp" href="./assets/Master.pdf" download>Résumé PDF</a>
+        </nav>
+        <footer class="site-footer">
+          <p class="site-footer__line">
+            <span class="pulse-dot"></span>
+            Open to selective roles · Baltimore, MD · Made with too much CSS
+          </p>
+        </footer>
+      </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
