@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberAscii | Aswath Suresh</title>
+    <meta
+      name="description"
+      content="Cyber ASCII camera portfolio of Aswath Suresh. Local-only, no API key."
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="hud">
+      <div class="hud__left">
+        <p class="hud__brand">CyberAscii <span>v4.0</span></p>
+        <p class="hud__sub">LOCAL MODE :: credits_required = 0</p>
+      </div>
+      <div class="hud__right">
+        <span>SYS: ONLINE</span>
+        <span>CAM: <strong id="cam-status">BOOTING</strong></span>
+        <span class="dot">REC</span>
+      </div>
+    </header>
+
+    <main id="main-content" class="viewport">
+      <video id="camera-feed" playsinline autoplay muted></video>
+      <canvas id="process-canvas" aria-hidden="true"></canvas>
+
+      <section class="ascii-stage panel">
+        <pre id="ascii-output">Initializing...</pre>
+      </section>
+
+      <aside class="bio panel">
+        <h1>ASWATH SURESH</h1>
+        <p id="hero-tagline"></p>
+        <ul>
+          <li>M.S. Data Science @ Johns Hopkins (GPA 3.94)</li>
+          <li>Founding Engineer @ EligioAI</li>
+          <li>Data Scientist @ Campbell</li>
+          <li>B.Tech Aerospace @ IIT Bombay</li>
+        </ul>
+        <div class="links">
+          <a href="mailto:aswathsureshjhu@gmail.com">Email</a>
+          <a href="tel:+14104937355">Phone</a>
+          <a href="https://www.linkedin.com/in/aswathsuresh25" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </aside>
+    </main>
+
+    <section class="controls panel">
+      <label>
+        FONT <span id="font-size-val">10</span>
+        <input id="font-size" type="range" min="6" max="16" value="10" />
+      </label>
+      <label>
+        BRIGHTNESS <span id="brightness-val">1.0</span>
+        <input id="brightness" type="range" min="0.6" max="2.0" step="0.1" value="1.0" />
+      </label>
+      <label>
+        CONTRAST <span id="contrast-val">1.0</span>
+        <input id="contrast" type="range" min="0.6" max="2.6" step="0.1" value="1.0" />
+      </label>
+      <label>
+        MODE
+        <select id="theme-mode">
+          <option value="matrix" selected>matrix</option>
+          <option value="bw">bw</option>
+          <option value="retro">retro</option>
+        </select>
+      </label>
+      <button id="snapshot" type="button">SAVE SNAPSHOT</button>
+      <button id="scan" type="button">SCAN PROFILE</button>
+    </section>
+
+    <dialog id="scan-modal">
+      <h2>LOCAL ASCII SCAN</h2>
+      <pre id="scan-result"></pre>
+      <button id="close-modal" type="button">Close</button>
+    </dialog>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
